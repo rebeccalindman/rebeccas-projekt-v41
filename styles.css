@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: var(--column-width);
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 8rem auto 8rem;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: start;
+}
+
+header img {
+    height: 200px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: aquamarine;
+    width: 100%;
+    height: 3rem;
+}
+
+ul {
+    padding: 1rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* This centers the items within the nav */
+    align-items: start;
+    gap: 3rem; /* Adds space between the items */
+    height: inherit;
+}
+
+li {
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "mainTop"
+    "main-highlight"
+    "main-text";
+    background-color: antiquewhite;
+}
+
+
+.mainTop {
+    --fill-layer-image-opacity: 0.38;
+    --fill-layer-background-media-position: fixed;
+    --fill-layer-background-media-pointer-events: none;
+    --bg-overlay-color: rgb(var(--color_15));
+    --bg-gradient: none;
+    width: 100%;
+    --column-width: 980px;
+    --column-flex: 980;
+}
+
+.mainTop img {
+    max-width: clamp(200px, 100%, 800px);
+}
+
+.highlight {
+    grid-area: main-highlight;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: plum;
+    gap: 1%;
+}
+
+article {
+    background-color: black;
+    border: 1px cornflowerblue solid;
+    width: 49%;
+}
+
+.textBox {
+    color: white;
+    border: 2px red solid;
+}
+
+#wide {
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: aqua;
+}
+
+
+@media (min-width: 728px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 8rem 8fr 2fr;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 8rem 1fr 2fr;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+}

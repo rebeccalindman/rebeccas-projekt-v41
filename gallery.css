@@ -1,0 +1,9 @@
+.galleryItems{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.galleryItems figure img{
+    max-height: 300px;
+}
