@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="gallery.css"> <!-- gallery specific styling -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css"> 
     <title>rebeccalindman - Gallery</title>
 </head>
 <body>
-    <header></header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-    </nav>
+        <!-- Header -->
+        <header>
+            <img src="design-elements/icon-raccoon.JPG" alt="Drawing of raccoon">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+
     <main>
-
-       
-
         <section class="galleryItems" id="classic"> <!-- Classic section -->
             <article id="wide">
                 <h2>Classic</h2>
@@ -29,13 +30,47 @@
             </article>
 
             <article>
-                <h3>Article 1</h3>
-
+                <a href="#img1" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/death-art.jpg" alt="">
+                    </figure>
+                </a>
             </article>
+            
             <article>
-                <h3>Article 2</h3>
-
+                <a href="#img2" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/wurt-beads.jpeg" alt="">
+                    </figure>
+                </a>
             </article>
+
+            <article id="tall">
+                <a href="#img3" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/boy-apple.JPG" alt="">
+                    </figure>
+                </a>
+            </article>
+            
+            <!-- Add a close button by linking back to an empty anchor -->
+            <article id="img1" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                    <img src="drawings/death-art.jpg" alt="">
+            </article>
+
+            <article id="img2" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/wurt-beads.jpeg" alt="">
+            </article>
+
+            <article  id="img3" class="lightbox">
+                <a href="#" class="close-overlay">x</a>
+                        <img src="drawings/boy-apple.JPG" alt="">
+            </article>
+
+            
+            
 
         </section>
 
@@ -50,18 +85,40 @@
 
             <article>
                 <figure>
-                    <img src="drawings/smaug2024.JPG" alt="Drawing of male bengal cat">
-                    <figcaption>Smaug</figcaption>
+                    
                 </figure>
                 
             </article>
             <article>
-                <figure>
-                    <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
+                <a href="#img21" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/smaug2024.JPG" alt="Drawing of male bengal cat">
+                    <figcaption>Smaug</figcaption>
+                    </figure>
+                </a>
+            </article>
+            <article>
+                <a href="#img22" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
+                        <figcaption>Astrid</figcaption>
+                    </figure>
+                </a>
+            </article>
+            <article>
+                <a href="#img23" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
                     <figcaption>Astrid</figcaption>
-                </figure>
-                
-
+                    </figure>
+                </a>
+            </article>
+            <article>
+                <a href="#img24" class="overlay-trigger">
+                        <figure>
+                            <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
+                        </figure>
+                </a>
             </article>
 
         </section>
@@ -75,12 +132,38 @@
             </article>
 
             <article>
-                <h3>Article 1</h3>
-
+                <a href="#img31" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+                    <figcaption>Astrid</figcaption>
+                    </figure>
+                </a>
             </article>
             <article>
-                <h3>Article 2</h3>
+                <a href="#img32" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+                    <figcaption>Astrid</figcaption>
+                    </figure>
+                </a>
+            </article>
 
+            <article>
+                <a href="#img33" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+                    <figcaption>Astrid</figcaption>
+                    </figure>
+                </a>
+            </article>
+
+            <article>
+                <a href="#img34" class="overlay-trigger">
+                    <figure>
+                        <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+                    <figcaption>Astrid</figcaption>
+                    </figure>
+                </a>
             </article>
 
         </section>

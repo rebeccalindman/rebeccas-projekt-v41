@@ -4,24 +4,34 @@
     box-sizing: border-box;
 }
 
-figure {
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    height: var(--column-width);
-}
 
 body {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 8rem auto 8rem;
+    grid-template-rows: 12rem auto 8rem;
     grid-template-areas: 
     "header"
     "main"
     "footer";
 }
 
+/* Figure */
+a:not(.lightbox a), figure {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+figure img {
+    max-width: 800px;
+    width: inherit;
+    justify-self: center;
+}
+
+/********************/
+/***** Header *****/
 header {
     grid-area: header;
     background-color: aliceblue;
@@ -35,6 +45,7 @@ header img {
     height: 200px;
 }
 
+/** Navigation */
 nav {
     grid-area: nav;
     background-color: aquamarine;
@@ -52,40 +63,42 @@ ul {
     height: inherit;
 }
 
-li {
+/* li {
     
-}
+} */
 
 a {
     text-decoration: none;
 }
 
+/**************/
+/***** Main content *****/
+
 main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
     "mainTop"
     "main-highlight"
     "main-text";
     background-color: antiquewhite;
+    max-width: 1000px;
 }
 
 
 .mainTop {
-    --fill-layer-image-opacity: 0.38;
-    --fill-layer-background-media-position: fixed;
-    --fill-layer-background-media-pointer-events: none;
-    --bg-overlay-color: rgb(var(--color_15));
-    --bg-gradient: none;
-    width: 100%;
-    --column-width: 980px;
-    --column-flex: 980;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.mainTop img {
+
+/******* REVIEW THIS ********/
+/* .mainTop img {
     max-width: clamp(200px, 100%, 800px);
-}
+} */
+/*******/
 
 .highlight {
     grid-area: main-highlight;
@@ -95,10 +108,11 @@ main {
     gap: 1%;
 }
 
-article {
-    background-color: black;
-    border: 1px cornflowerblue solid;
-    width: 49%;
+article:not(.lightbox) {
+    background-color: white;
+    border: 3px white solid;
+    width: 50%;
+    height: 30rem;
 }
 
 .textBox {
@@ -108,7 +122,11 @@ article {
 
 #wide {
     width: 100%;
+    height: fit-content;
 }
+/* #tall {
+    height: fit-content;
+} */
 
 footer {
     grid-area: footer;
@@ -116,22 +134,28 @@ footer {
 }
 
 
+
+
+
+
+
 @media (min-width: 728px) {
     body {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 8rem 8fr 2fr;
         grid-template-areas: 
         "header header"
         "main main"
         "footer footer";
+    }
+    main {
+        justify-self: center;
     }
 }
 @media (min-width: 1024px) {
     body {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr;
-        grid-template-rows: 8rem 1fr 2fr;
         grid-template-areas: 
         "header header header"
         "main main main"
