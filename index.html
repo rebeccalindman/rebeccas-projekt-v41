@@ -78,7 +78,7 @@
                 <h2 id="wide">Open for Commissions!</h2>
                 <p>Interested in commissioning a custom portrait or digital artwork? Fill out the form below, and let’s bring your vision to life. Whether you’re looking for a personal piece or artwork for your business, I’m here to create something truly special for you.</p>
                 
-                <form action="#" method="POST" aria-labelledby="commissionForm">
+                <form action="#" method="POST" >
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" placeholder="Your full name" required>
                     
@@ -130,12 +130,12 @@
         </section>
 
         <!-- Newsletter Signup -->
-        <section class="newsletter-signup">
+        <section class="newsletter-signup" aria-label="newsletter-signup">
             <h3>Stay Updated</h3>
-            <p>Sign up for my newsletter to receive updates on new artwork and exhibitions:</p>
-            <form action="#" method="POST">
+            <p>Sign up for my newsletter to receive updates on new artwork and exhibitions!</p>
+            <form action="#" method="POST" aria-label="newsletter-subscribe">
                 <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
+                <button type="submit" aria-label="newsletter subscription">Subscribe</button>
             </form>
         </section>
 

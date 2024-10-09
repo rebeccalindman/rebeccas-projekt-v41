@@ -369,39 +369,42 @@
         
 
     </main>
-    <footer>
-        <div class="footer-container">
-            <!-- Contact Information -->
-            <section class="contact-info">
-                <h3>Contact Me</h3>
-                <p>Email: <a href="mailto:rebecca.lindman@chasacademy.se">rebecca.lindman@chasacademy.se</a></p>
-                <p>Phone: <a href="tel:+46706994504">+46-706 99 45 04</a></p>
-            </section>
-    
-            <!-- Social Media Links -->
-            <section class="social-links">
-                <h3>Connect with Me</h3>
+       <!-- Footer -->
+<footer role="contentinfo">
+    <div class="footer-container">
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h3>Contact Me</h3>
+            <p>Email: <a href="mailto:rebecca.lindman@chasacademy.se">rebecca.lindman@chasacademy.se</a></p>
+            <p>Phone: <a href="tel:+46706994504">+46-706 99 45 04</a></p>
+        </section>
+
+        <!-- Social Media Links -->
+        <section class="social-links">
+            <h3>Connect with Me</h3>
+            <nav aria-label="Footer Social Links">
                 <ul>
                     <li><a href="https://www.linkedin.com/in/rebecca-lindman/" target="_blank">LinkedIn</a></li>
                 </ul>
-            </section>
-    
-            <!-- Newsletter Signup -->
-            <section class="newsletter-signup">
-                <h3>Stay Updated</h3>
-                <p>Sign up for my newsletter to receive updates on new artwork and exhibitions:</p>
-                <form action="#" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </section>
-    
-            <!-- Copyright & Usage Rights -->
-            <section class="copyright">
-                <p>© 2024 Rebecca Lindman. All rights reserved.</p>
-                <p>All photos are for personal use only and cannot be reproduced for commercial purposes without permission.</p>
-            </section>
-        </div>
-    </footer>
+            </nav>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-signup" aria-label="newsletter-signup">
+            <h3>Stay Updated</h3>
+            <p>Sign up for my newsletter to receive updates on new artwork and exhibitions!</p>
+            <form action="#" method="POST" aria-label="newsletter-subscribe">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit" aria-label="newsletter subscription">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Copyright & Usage Rights -->
+        <section class="copyright">
+            <p>© 2024 Rebecca Lindman. All rights reserved.</p>
+            <p>All photos are for personal use only and cannot be reproduced for commercial purposes without permission.</p>
+        </section>
+    </div>
+</footer>
 </body>
 </html>
