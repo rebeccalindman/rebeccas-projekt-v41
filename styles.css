@@ -147,16 +147,16 @@ a {
 /**************/
 /***** Main content *****/
 
-main {
+main:not(#Gallery main) {
     grid-area: main;
     display: grid;
     grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas: 
-    "mainTop"
-    "main-highlight"
-    "main-text";
+    "mainTop mainTop"
+    "textBox textBox"
+    "information gallery";
     background-color: rgba(56, 66, 75, 0.6);
-    max-width: 1000px;
 }
 
 /* Hero section */
@@ -195,30 +195,38 @@ main {
 /* ******* */
 
 /* Main content section */
-.highlight {
-    grid-area: main-highlight;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: plum;
-    gap: 1%;
-    justify-content: center;
-    align-items: center;
+section:not(#Gallery section){
+    padding: 2vw;
+    margin: 1rem;
 }
-
-/* article:not(.lightbox) {
-    background-color: white;
-    height: 30rem; */
-   /*  width: clamp(100px, 50vw, 400px); */ /* Use viewport width instead of percentage to avoid overflow */
-       
-   /*  }
- */
-
 
 .textBox {
-    grid-area: main-text;
+    grid-area: textBox;
     color: white;
-    border: 2px red solid;
+    border: 2px rgb(0, 30, 255) solid;
+    height: fit-content;
 }
+
+.information, .information article, .information .contact { 
+    height: fit-content;
+    background-color: grey;
+}
+
+
+/* Gallery */
+.galleryItems{
+    grid-area: gallery;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5vw;
+    margin-bottom: 2vh;
+    background-color: white;
+}
+
+
+
 
 #wide {
     width: 100%;
@@ -245,6 +253,7 @@ footer {
     main {
         justify-self: center;
     }
+    
 
     h1{
         display: block;
@@ -268,6 +277,7 @@ footer {
         /* border-left: 2px rgb(217, 217, 217) solid; */
         justify-content: center;
     }
+
 
  
 

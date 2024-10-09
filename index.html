@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/headings.css">
+    <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="styles.css">
     <title>rebeccalindman - Home</title>
 </head>
@@ -23,47 +23,105 @@
 
     
 
-    <!-- Aside -->
-    <aside></aside>
-
     <!-- Main content -->
     <main>
         <!-- Hero section-->
         <section class="mainTop">
             <H2>Bringing Stories to Life through Portraits and Digital Masterpieces</H2>
-            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ea voluptatem odit tenetur exercitationem officiis modi iste a, repudiandae doloremque.</h3>
+            <p>Welcome to my world of art, where every portrait tells a story and every brushstroke carries emotion. Explore my gallery to discover the beauty in everyday moments.</p>
             <a class="callToAction" href="gallery.html"><button>Explore My Work</button></a>
             
         </section>
         
         <!-- Content section -->
-        <section class="highlight">
-            <article id="wide">
-                <h2>Welcome</h2>
-                <p>... to my world of art, where every portrait tells a story and every brushstroke carries emotion. Explore my gallery to discover the beauty in everyday moments.</p>
-                <button onclick="window.location.href='gallery.html';">Explore</button>
+            
+
+            <section class="galleryItems" id="portraits"> <!-- Portrait section -->
+    
+                <article>
+                    <a href="#img21" class="overlay-trigger">
+                        <figure>
+                            <img src="drawings/smaug2024.JPG" alt="Drawing of male bengal cat">
+                        <figcaption>Smaug, colored pencils on tinted paper, A4</figcaption>
+                        </figure>
+                    </a>
+                </article>
                 
+                <article>
+                    <a href="#img22" class="overlay-trigger">
+                        <figure>
+                            <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
+                        <figcaption>Astrid, colored pencils on tinted paper, A4</figcaption>
+                        </figure>
+                    </a>
+                </article>
+                
+                <article>
+                    <a href="#img23" class="overlay-trigger">
+                        <figure>
+                            <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+                        <figcaption>Girl portrait, watercolor on paper, A3</figcaption>
+                        </figure>
+                    </a>
+                </article>
+    
+                <article>
+                    <a href="#img24" class="overlay-trigger">
+                        <figure>
+                            <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
+                            <figcaption>Snail Berry, colored pencils on white paper, A3</figcaption>
+                        </figure>
+                    </a>
+                </article>
+    
+                <!-- Lightboxes for Portrait section -->
+                <article id="img21" class="lightbox">
+                    <a href="#" class="close-overlay">×</a>
+                    <img src="drawings/smaug2024.JPG" alt="Drawing of male bengal cat">
+                </article>
+    
+                <article id="img22" class="lightbox">
+                    <a href="#" class="close-overlay">×</a>
+                    <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
+                </article>
+    
+                <article id="img23" class="lightbox">
+                    <a href="#" class="close-overlay">×</a>
+                    <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+                </article>
+    
+                <article id="img24" class="lightbox">
+                    <a href="#" class="close-overlay">×</a>
+                    <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
+                </article>
+            </section>
 
-            </article>
 
+        <section class="textBox">
             <article>
-                <h3>Article 1</h3>
-
-            </article>
-            <article>
-                <h3>Article 2</h3>
+                <h3>About Bexterart</h3>
+                <p>Rebecca is a self-taught artist living in Sweden. Here, on Bexterart, she displays a selection of her previous with the hopes of giving inspiration to other hobby artists. </p>
 
             </article>
 
         </section>
 
-        <section class="textInfoContainer">
-            <article class="textBox">
-                <h3>Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora facilis incidunt accusamus tempore repellendus aliquid quisquam, obcaecati placeat nisi totam repellat consectetur praesentium exercitationem animi necessitatibus quod excepturi fugiat est!</p>
+        <section class="information">
+            <article id="wide">
+                <h2>Contact</h2>
+                <p>For commissions, contact me via this form:</p>
+                <form action=""></form>
+
+                
 
             </article>
 
+            <article class="contact">
+                Orders here. Form:
+            </article>
+            <article>
+                
+            </article>
         </section>
 
     </main>

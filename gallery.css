@@ -6,20 +6,18 @@
     background-color: transparent
 } */
 
-.galleryItems{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: .5vw;
-    margin-bottom: 2vh;
-}
+
 
 #Gallery main {
     background-color: white;
 }
 
-
+article:not(.lightbox, .textBox article, .contact article, .information article) {
+    background-color: white;
+    height: 30rem;
+    width: clamp(300px, 15vw, 400px); /* Use viewport width instead of percentage to avoid overflow */
+       
+    }
 
 /* Figure */
 #Gallery a:not(.lightbox a), #Gallery figure {
@@ -30,18 +28,13 @@
     height: inherit;
 }
 
-article:not(.lightbox) {
-    background-color: white;
-    height: 30rem;
-    width: clamp(300px, 15vw, 400px); /* Use viewport width instead of percentage to avoid overflow */
-       
-    }
-
 #Gallery figure img {
     max-width: 800px;
     width: inherit;
     justify-self: center;
 }
+
+
 
 #wide {
     background-color: rgb(238, 205, 37);
@@ -50,7 +43,7 @@ article:not(.lightbox) {
 }
 
 /* Font */
-#Gallery article h2 {
+.galleryItems h2 {
     font-family: Notera, cursive;
     text-transform: lowercase;
     font-size: clamp(3rem, 6vw, 6rem);
