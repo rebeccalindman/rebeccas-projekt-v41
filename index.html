@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Rebecca Lindman’s portfolio showcasing custom portrait drawings, digital art, and classic art. Commission personalized artwork for personal or business needs.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="styles.css">
-    <title>rebeccalindman - Home</title>
+    <title>BexterArt - Home</title>
 </head>
 <body>
     <!-- Background Image Container -->
@@ -13,7 +13,7 @@
     <!-- Header -->
     <header>
         <h1>BexterArt</h1>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html"><h2>Home</h2></a></li>
                 <li><a href="gallery.html"><h2>Gallery</h2></a></li>
@@ -27,102 +27,124 @@
     <main>
         <!-- Hero section-->
         <section class="hero">
-            <H2>Bringing Stories to Life through Portraits and Digital Masterpieces</H2>
+            <H2>Creating Custom Portraits and Digital Art that Tell Your Story</H2>
             <p>Welcome to my world of art, where every portrait tells a story and every brushstroke carries emotion. Explore my gallery to discover the beauty in everyday moments.</p>
-            <a class="callToAction" href="gallery.html"><button>Explore My Work</button></a>
+            <a class="callToAction" href="gallery.html">Explore My Work</a>
             
         </section>
         
         <!-- Content section -->
             
 
-            <section class="galleryItems" id="galleryItems3"> 
-    
-                <article>
-                    <a href="#img21" class="overlay-trigger">
-                        <figure>
-                            <img src="drawings/smaug2024.JPG" alt="Drawing of male bengal cat">
-                        <figcaption>Smaug, colored pencils on tinted paper, A4</figcaption>
-                        </figure>
-                    </a>
-                </article>
-                
-            </section>
 
             <section class="galleryItems" id="galleryItems2">
                 <article>
                     <a href="#img22" class="overlay-trigger">
                         <figure>
-                            <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
-                        <figcaption>Astrid, colored pencils on tinted paper, A4</figcaption>
-                        </figure>
-                    </a>
-                </article>
-
-            </section>
-                
-
-                
-            <section class="galleryItems" id="galleryItems1">
-    
-                <article>
-                    <a href="#img24" class="overlay-trigger">
-                        <figure>
                             <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
                             <figcaption>Snail Berry, colored pencils on white paper, A3</figcaption>
                         </figure>
                     </a>
+                    <br>
+                    <p><b>"Snail on Strawberry” (Pencil Drawing, A3):</b> This cute piece plays on unexpected combinations from nature. Commissioned for a decorational poster, it represents my love for creating playful, yet detailed illustrations.</p>
                 </article>
 
-            </section>
+        
+                
     
-                <!-- Lightboxes for Portrait section -->
-                <article id="img21" class="lightbox">
-                    <a href="#" class="close-overlay">×</a>
-                    <img src="drawings/smaug2024.JPG" alt="Drawing of male bengal cat">
-                </article>
+                <!-- Lightbox -->
+
     
                 <article id="img22" class="lightbox">
                     <a href="#" class="close-overlay">×</a>
-                    <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
-                </article>
-    
-    
-                <article id="img24" class="lightbox">
-                    <a href="#" class="close-overlay">×</a>
                     <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
                 </article>
+    
+
             </section>
 
 
         <section class="textBox">
-            <article id="wide">
-                <h3>About Bexterart</h3>
-                <p>Rebecca is a self-taught artist living in Sweden. Here, on Bexterart, she displays a selection of her previous with the hopes of giving inspiration to other hobby artists. </p>
+            <article>
+                <h2 id="wide">About Bexterart</h2>
+                <p>I am Rebecca, a self-taught artist based in Sweden. On BexterArt, I showcase my collection of portraiture, digital art, and classic art. My aim is to inspire others through my unique approach, blending realism and emotion to create one-of-a-kind pieces for both personal and commercial projects. </p>
 
             </article>
 
         </section>
 
         <section class="information">
-            <article class="contact" id="wide">
-                <h2>Contact</h2>
-                <p>For commissions, contact me via this form:</p>
-                <form action=""></form>
-
-            </article>
-
             <article class="contact">
-                Orders here. Form:
-            </article>
-            <article>
+                <h2 id="wide">Open for Commissions!</h2>
+                <p>Interested in commissioning a custom portrait or digital artwork? Fill out the form below, and let’s bring your vision to life. Whether you’re looking for a personal piece or artwork for your business, I’m here to create something truly special for you.</p>
                 
+                <form action="#" method="POST">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    
+                    <label for="type">Type of Commission:</label>
+                    <select id="type" name="type" required>
+                        <option value="" disabled selected>Select commission type</option>
+                        <option value="portrait">Portrait</option>
+                        <option value="digital">Digital Art</option>
+                        <option value="classic">Classic Art</option>
+                    </select>
+                    
+                    <label for="deadline">Preferred Deadline:</label>
+                    <input type="date" id="deadline" name="deadline" required>
+                    
+                    <label for="budget">Budget (SEK):</label>
+                    <input type="number" id="budget" name="budget" placeholder="Enter your budget" min="1" required>
+                    
+                    <label for="details">Additional Details:</label>
+                    <textarea id="details" name="details" placeholder="Describe your vision or requirements" rows="5"></textarea>
+                    
+                    <button type="submit">Submit Commission Request</button>
+                </form>
             </article>
         </section>
 
     </main>
     <!-- Footer -->
-    <footer></footer>
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h3>Contact Me</h3>
+            <p>Email: <a href="mailto:rebecca.lindman@chasacademy.se">rebecca.lindman@chasacademy.se</a></p>
+            <p>Phone: <a href="tel:+46706994504">+46-706 99 45 04</a></p>
+        </section>
+
+        <!-- Social Media Links -->
+        <section class="social-links">
+            <h3>Connect with Me</h3>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/rebecca-lindman/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-signup">
+            <h3>Stay Updated</h3>
+            <p>Sign up for my newsletter to receive updates on new artwork and exhibitions:</p>
+            <form action="#" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Copyright & Usage Rights -->
+        <section class="copyright">
+            <p>© 2024 Rebecca Lindman. All rights reserved.</p>
+            <p>All photos are for personal use only and cannot be reproduced for commercial purposes without permission.</p>
+        </section>
+    </div>
+</footer>
+
 
 </body>
 </html>
