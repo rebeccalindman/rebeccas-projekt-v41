@@ -4,46 +4,9 @@
     box-sizing: border-box;
 }
 
-body{
-    /* background-color: whitesmoke; */
-    font-family: monospace, Courier, 'Courier New';
-    font-size: 0.8rem;
-    color: black;
-    }
-    
-    
-    h2 {
-        letter-spacing: 0.3rem;
-        text-transform: uppercase;
-        font-size: clamp(1rem, 4vw, 1.5rem); /* Preferred size is now based on the viewport width */
-        margin-top: 0;
-    }
-    
-    h3{
-        font-size: 0.8rem;
-        letter-spacing: 0.1rem;
-        margin-top: 30px;
-    }
-
-    
-
-/* Background image styling */
-.background-image {
-    position: absolute;
-    top: -110px;
-    left: 0;
-    left: 50%; /* Center the image horizontally */
-    transform: translateX(-50%); /* Translate it back by 50% to truly center */
-    width: clamp(200px, 100%, 1600px);
-    height: 100vh; /* Full viewport height */
-    z-index: -1; /* Places it behind all other content */
-    background: url('drawings/boy-apple.JPG') no-repeat center center/cover; /* Adjust the image path */
-}
-
 
 body {
     display: grid;
-    background-color: rgba(56, 66, 75);
     grid-template-columns: auto;
     grid-template-rows: 12rem auto 8rem;
     grid-template-areas: 
@@ -71,32 +34,20 @@ figure img {
 /***** Header *****/
 header {
     grid-area: header;
-    background-color: rgba(56, 66, 75);
+    background-color: rgb(56, 66, 75);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: start;
-    max-width: 1600px;
-}
-
-h1{
-    font-size: clamp(2rem, 6vw, 2.5rem); 
-    letter-spacing: 0.3rem;
-   /*  align-self: center; */
-    padding: 2rem;
-    border-bottom: 2px white solid;
-    border-right: 2px white solid;
-    background-color: rgb(238, 205, 37)
 }
 
 
 /** Navigation */
 nav {
     grid-area: nav;
-    background-color: none;
+    background-color: rgb(56, 66, 75);
     width: 100%;
-    height: clamp(3rem, 10%, 6rem);
-    border-bottom: 2px white solid;
+    height: 3rem;
 }
 
 nav a{
@@ -219,9 +170,5 @@ footer {
         "header header header"
         "main main main"
         "footer footer footer";
-    }
-
-    main {
-        max-width: clamp(900px, 100%, 1600px);
     }
 }
