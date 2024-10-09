@@ -11,12 +11,37 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: .5vw;
+    margin-bottom: 2vh;
 }
 
 #Gallery main {
     background-color: white;
 }
 
+
+
+/* Figure */
+#Gallery a:not(.lightbox a), #Gallery figure {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+article:not(.lightbox) {
+    background-color: white;
+    height: 30rem;
+    width: clamp(300px, 15vw, 400px); /* Use viewport width instead of percentage to avoid overflow */
+       
+    }
+
+#Gallery figure img {
+    max-width: 800px;
+    width: inherit;
+    justify-self: center;
+}
 
 #wide {
     background-color: rgb(238, 205, 37);

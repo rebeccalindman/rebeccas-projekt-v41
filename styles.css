@@ -110,6 +110,7 @@ nav {
     height: clamp(4rem, 20%, 6rem);
     border-bottom: 2px rgb(217, 217, 217) solid;
     background-color: rgba(56, 66, 75);
+    position: sticky;
 }
 
 nav a{
@@ -160,6 +161,7 @@ main {
 
 /* Hero section */
 .mainTop {
+    grid-area: mainTop;
     display: flex;
     justify-self: center;
     flex-direction: column;
@@ -177,12 +179,14 @@ main {
 }
 
 .callToAction button {
-    padding: 10px 20px;
+    padding: 1rem 2rem;
+    border-radius: clamp(5px, 2vw, 20px);
     font-size: 1rem;
     background-color: #159281; /* Green */
     color: white;
     border: none;
     cursor: pointer;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .callToAction button:hover {
@@ -201,16 +205,17 @@ main {
     align-items: center;
 }
 
-article:not(.lightbox) {
+/* article:not(.lightbox) {
     background-color: white;
-    height: 30rem;
-    width: clamp(100px, 50vw, 400px); /* Use viewport width instead of percentage to avoid overflow */
+    height: 30rem; */
+   /*  width: clamp(100px, 50vw, 400px); */ /* Use viewport width instead of percentage to avoid overflow */
        
-    }
-
+   /*  }
+ */
 
 
 .textBox {
+    grid-area: main-text;
     color: white;
     border: 2px red solid;
 }
@@ -264,31 +269,18 @@ footer {
         justify-content: center;
     }
 
-    nav::before {
-        content: "";
-        position: absolute;
-        top: -45px; /* Adjust the height above the nav */
-        left: 20vw; /* Extend slightly to the left */
-        width: 600px;
-        height: 80px;
-        background-color: rgba(56, 66, 75); /* Same color as the nav background */
-        border-bottom-left-radius: 100px; /* Creates the organic curve */
-        z-index: -1; /* Behind the text and nav bar*/
-    }
+ 
 
 }
 
 @media (min-width: 1024px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr 2fr 2fr;
-        grid-template-areas: 
-        "header header header"
-        "main main main"
-        "footer footer footer";
-    }
 
     main {
         max-width: clamp(900px, 100%, 1600px);
+    }
+
+    header {
+        max-width: 1600px;
+        justify-self: center;
     }
 }
