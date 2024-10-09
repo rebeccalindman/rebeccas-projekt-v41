@@ -12,7 +12,7 @@
     background-color: white;
 }
 
-article:not(.lightbox, .textBox article, .contact article, .information article) {
+article:not(.lightbox, .textBox article) {
     background-color: white;
     height: 30rem;
     width: clamp(300px, 15vw, 400px); /* Use viewport width instead of percentage to avoid overflow */

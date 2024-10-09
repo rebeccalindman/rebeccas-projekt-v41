@@ -150,18 +150,20 @@ a {
 main:not(#Gallery main) {
     grid-area: main;
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas: 
-    "mainTop mainTop"
+    "hero hero"
     "textBox textBox"
-    "information gallery";
+    "gallery2 gallery3"
+    "information gallery1"
+    ;
     background-color: rgba(56, 66, 75, 0.6);
 }
 
 /* Hero section */
-.mainTop {
-    grid-area: mainTop;
+.hero {
+    grid-area: hero;
     display: flex;
     justify-self: center;
     flex-direction: column;
@@ -195,9 +197,11 @@ main:not(#Gallery main) {
 /* ******* */
 
 /* Main content section */
-section:not(#Gallery section){
+section:not(#Gallery section, .hero){
     padding: 2vw;
     margin: 1rem;
+    background-color: white;
+    color: black;
 }
 
 .textBox {
@@ -209,7 +213,7 @@ section:not(#Gallery section){
 
 .information, .information article, .information .contact { 
     height: fit-content;
-    background-color: grey;
+    background-color: red;
 }
 
 
@@ -224,6 +228,10 @@ section:not(#Gallery section){
     margin-bottom: 2vh;
     background-color: white;
 }
+
+#galleryItems1{grid-area: gallery1}
+#galleryItems2{grid-area: gallery2}
+#galleryItems3{grid-area: gallery3}
 
 
 
