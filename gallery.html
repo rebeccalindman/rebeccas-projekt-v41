@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gallery.css"> 
+    <link rel="stylesheet" href="styles.css">
     <title>rebeccalindman - Gallery</title>
 </head>
-<body>
+<body id="Gallery">
+    <!-- Background Image Container -->
+    <div class="background-image"></div>
         <!-- Header -->
         <header>
-            <h1>rebecca</h1>
+            <h1>BexterArt</h1>
             <nav>
                 <ul>
                     <li><a href="index.html"><h2>Home</h2></a></li>
@@ -25,9 +27,6 @@
             <article id="wide">
                 <h2>Classic</h2>
                 <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, dolor.</h3>
-                
-                
-
             </article>
 
             <article>
@@ -54,10 +53,10 @@
                 </a>
             </article>
             
-            <!-- Add a close button by linking back to an empty anchor -->
+            <!-- Lightboxes for Classic section -->
             <article id="img1" class="lightbox">
                 <a href="#" class="close-overlay">×</a>
-                    <img src="drawings/death-art.jpg" alt="">
+                <img src="drawings/death-art.jpg" alt="">
             </article>
 
             <article id="img2" class="lightbox">
@@ -65,31 +64,18 @@
                 <img src="drawings/wurt-beads.jpeg" alt="">
             </article>
 
-            <article  id="img3" class="lightbox">
-                <a href="#" class="close-overlay">x</a>
-                        <img src="drawings/boy-apple.JPG" alt="">
+            <article id="img3" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/boy-apple.JPG" alt="">
             </article>
-
-            
-            
-
         </section>
 
         <section class="galleryItems" id="portraits"> <!-- Portrait section -->
             <article id="wide">
                 <h2>Portraits</h2>
                 <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, dolor.</h3>
-        
-                
-
             </article>
 
-            <article>
-                <figure>
-                    
-                </figure>
-                
-            </article>
             <article>
                 <a href="#img21" class="overlay-trigger">
                     <figure>
@@ -98,14 +84,16 @@
                     </figure>
                 </a>
             </article>
+            
             <article>
                 <a href="#img22" class="overlay-trigger">
                     <figure>
                         <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
-                        <figcaption>Astrid</figcaption>
+                    <figcaption>Astrid</figcaption>
                     </figure>
                 </a>
             </article>
+            
             <article>
                 <a href="#img23" class="overlay-trigger">
                     <figure>
@@ -114,22 +102,41 @@
                     </figure>
                 </a>
             </article>
+
             <article>
                 <a href="#img24" class="overlay-trigger">
-                        <figure>
-                            <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
-                        </figure>
+                    <figure>
+                        <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
+                    </figure>
                 </a>
             </article>
 
+            <!-- Lightboxes for Portrait section -->
+            <article id="img21" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/smaug2024.JPG" alt="Drawing of male bengal cat">
+            </article>
+
+            <article id="img22" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/astrid2024.jpeg" alt="Drawing of young female abessinier cat">
+            </article>
+
+            <article id="img23" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+            </article>
+
+            <article id="img24" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/snail.jpeg" alt="Drawing of a snail on a strawberry">
+            </article>
         </section>
 
         <section class="galleryItems" id="digital"> <!-- Digital section -->
             <article id="wide">
                 <h2>Digital</h2>
                 <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, dolor.</h3>
-                
-
             </article>
 
             <article>
@@ -140,6 +147,7 @@
                     </figure>
                 </a>
             </article>
+
             <article>
                 <a href="#img32" class="overlay-trigger">
                     <figure>
@@ -167,6 +175,26 @@
                 </a>
             </article>
 
+            <!-- Lightboxes for Digital section -->
+            <article id="img31" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+            </article>
+
+            <article id="img32" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+            </article>
+
+            <article id="img33" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+            </article>
+
+            <article id="img34" class="lightbox">
+                <a href="#" class="close-overlay">×</a>
+                <img src="drawings/portrait-girl.jpg" alt="Portrait of girl with a pointing finger">
+            </article>
         </section>
 
     </main>

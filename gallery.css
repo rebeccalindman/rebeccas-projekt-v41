@@ -1,6 +1,37 @@
+/* #bodyGallery {
+    background-color: rgb(255, 255, 255);
+} */
+
+/* #Gallery header {
+    background-color: transparent
+} */
+
 .galleryItems{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#Gallery main {
+    background-color: white;
+}
+
+
+#wide {
+    background-color: rgb(238, 205, 37);
+    border: none;
+    padding: .5rem 2vw 1rem 2vw;
+}
+
+/* Font */
+#Gallery article h2 {
+    font-family: Notera, cursive;
+    text-transform: lowercase;
+    font-size: clamp(3rem, 6vw, 6rem);
+    text-align: right;
+    margin-bottom: 1rem;
+    letter-spacing: normal;
 }
 
 
@@ -11,25 +42,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* max-width: 90vw;
-    max-height: 90vh; */
+    max-width: 90vw; 
+    /* max-height: 90vh;  */
     z-index: 1000;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); */
     border-radius: 0.1rem;
 }
 
-.lightbox figure {
-    overflow: visible;
-}
-
 .lightbox img {
-    max-width: 100%;
+    max-width: 100vw;
     max-height: 90vh;
     justify-self: center;
     align-self: center;
     border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* when clicked --> show the corresponding image */
@@ -48,6 +76,8 @@
     text-decoration: none;
     padding: 0.5rem;
     padding-top: 0.2rem;
+    margin-top: 0.4rem;
+    margin-right: -4rem;
     width: 3rem;
     height: 3rem;
     text-align: center;
