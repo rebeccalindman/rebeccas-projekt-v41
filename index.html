@@ -13,7 +13,7 @@
     <!-- Header -->
     <header>
         <h1>BexterArt</h1>
-        <nav aria-label="Main navigation">
+        <nav role="navigation" aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html"><h2>Home</h2></a></li>
                 <li><a href="gallery.html"><h2>Gallery</h2></a></li>
@@ -78,7 +78,7 @@
                 <h2 id="wide">Open for Commissions!</h2>
                 <p>Interested in commissioning a custom portrait or digital artwork? Fill out the form below, and let’s bring your vision to life. Whether you’re looking for a personal piece or artwork for your business, I’m here to create something truly special for you.</p>
                 
-                <form action="#" method="POST">
+                <form action="#" method="POST" aria-labelledby="commissionForm">
                     <label for="name">Your Name:</label>
                     <input type="text" id="name" name="name" placeholder="Your full name" required>
                     
@@ -108,9 +108,9 @@
         </section>
 
     </main>
+
     <!-- Footer -->
-    <!-- Footer -->
-<footer>
+<footer role="contentinfo">
     <div class="footer-container">
         <!-- Contact Information -->
         <section class="contact-info">
@@ -122,9 +122,11 @@
         <!-- Social Media Links -->
         <section class="social-links">
             <h3>Connect with Me</h3>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/rebecca-lindman/" target="_blank">LinkedIn</a></li>
-            </ul>
+            <nav aria-label="Footer Social Links">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/rebecca-lindman/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </nav>
         </section>
 
         <!-- Newsletter Signup -->

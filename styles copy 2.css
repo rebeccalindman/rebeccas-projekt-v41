@@ -53,7 +53,8 @@ body{
     }
 
     
-/* Background Image */
+
+/* Background image styling */
 .background-image {
     position: absolute;
     top: 0;
@@ -66,6 +67,7 @@ body{
     background: url('drawings/boy-apple.JPG') no-repeat center center/cover; 
     max-width: 100vw; /* removes issue with background image overflow */
 }
+
 
 
 
@@ -114,9 +116,8 @@ h1{
 }
 
 
-/******************/
-/***** Nav *****/
-header nav {
+/** Navigation */
+nav {
     /* grid-area: nav; */
     display: flex;
     justify-content: end;
@@ -136,20 +137,24 @@ nav a{
 
 nav a:hover{
     background-color: rgb(238, 205, 37);
-    padding: 0 1rem;
+    padding: 3px;
     color: black;
     border-radius: 4px;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 5vw;
-    height: inherit;
-    gap: clamp(2rem, 5vw, 6rem); /* Adds space between the items */
     list-style-type: none;
+    display: flex;
+    /* justify-content: end;  *//* This centers the items within the nav */
+    padding-right: 5vw;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 6rem); /* Adds space between the items */
+    height: inherit;
 }
+
+/* li {
+    
+} */
 
 a {
     text-decoration: none;
@@ -167,7 +172,7 @@ main:not(#Gallery main) {
     "hero"
     "textBox"
     "gallery2"
-    "information"
+    "iformation"
     ;
     background-color: rgba(56, 66, 75, 0.6);
 }
@@ -178,7 +183,7 @@ main:not(#Gallery main) {
     display: flex;
     justify-self: center;
     flex-direction: column;
-    width: clamp(23rem, 60%, 80rem);
+    width: clamp(12rem, 60%, 80rem);
    /*  text-align: center;
     text-justify: center; */
     color: white;
@@ -191,6 +196,7 @@ main:not(#Gallery main) {
 
 }
 
+
 .callToAction {
     margin-bottom: 1vh;
 }
@@ -199,7 +205,7 @@ main:not(#Gallery main) {
     padding: 1rem 2rem;
     border-radius: clamp(5px, 2vw, 15px);
     font-size: 1rem;
-    background-color: #028674; /* Green */
+    background-color: #159281; /* Green */
     color: white;
     border: none;
     cursor: pointer;
@@ -209,22 +215,14 @@ main:not(#Gallery main) {
 .callToAction button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+/* ******* */
 
-/* Other sections */
-
-
+/* Main content section */
 section:not(#Gallery section, .hero, footer section){
     margin: 1rem;
     background-color: white;
     color: black;
 }
-
-article:not(.lightbox, .textBox article, .information article) {
-    background-color: white;
-    height: 30rem;
-    width: clamp(300px, 15vw, 400px); /* Use viewport width instead of percentage to avoid overflow */
-       
-    }
 
 .textBox {
     grid-area: textBox;
@@ -241,40 +239,47 @@ article:not(.lightbox, .textBox article, .information article) {
 }
 
 
-/********************/
-/***** Gallery *****/
+/* Gallery */
 .galleryItems{
     grid-area: gallery;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    gap: .5vw;
     margin-bottom: 2vh;
     background-color: white;
 }
 
-.galleryItems:not(#wide) {gap:2vw;}
 
-
-#galleryItems2 { /* the small "gallery" on main page */
+#galleryItems2 {
     grid-area: gallery2;
-    height: 800px;
-    align-items: baseline;
+   height: 780px;
+   align-items: baseline;
 }
 
+
 #galleryItems2 figcaption {display: none}
+
 
 #Gallery main {
     background-color: white;
 }
 
+article:not(.lightbox, .textBox article, .information article) {
+    background-color: white;
+    height: 30rem;
+    width: clamp(300px, 15vw, 400px); /* Use viewport width instead of percentage to avoid overflow */
+       
+    }
+
 /* Figure */
-.galleryItems a:not(.lightbox a), #Gallery figure {
+#Gallery a:not(.lightbox a), #Gallery figure {
     display: flex;
     overflow: hidden;
     align-items: center;
     justify-content: center;
     height: inherit;
-    border: white 2px solid;
 }
 
 #Gallery figure img {
@@ -348,8 +353,7 @@ article:not(.lightbox, .textBox article, .information article) {
     border-radius: 9999rem;
 }
 
-/**********************/
-/***** Contact Form *****/
+/* Form styling */
 .contact form {
     display: flex;
     flex-direction: column;
@@ -379,7 +383,7 @@ article:not(.lightbox, .textBox article, .information article) {
 
 .contact button {
     padding: 0.8rem 1.5rem;
-    background-color: #028674;
+    background-color: #159281;
     color: white;
     border: none;
     border-radius: 5px;
@@ -396,8 +400,8 @@ article:not(.lightbox, .textBox article, .information article) {
     max-width: 100%; /* Ensure it doesn't exceed container width */
 }
 
-/********************/
-/***** Footer *****/
+
+/* Footer styling */
 
 footer {
     grid-area: footer;
@@ -425,7 +429,7 @@ footer h3 {
 }
 
 footer a {
-    color: #71e3d3;
+    color: #159281;
     text-decoration: none;
 }
 
@@ -450,7 +454,7 @@ footer input[type="email"] {
 
 footer button {
     padding: 0.7rem 1rem;
-    background-color: #028674;
+    background-color: #159281;
     color: white;
     border: none;
     border-radius: 5px;
@@ -501,9 +505,6 @@ footer p {
 /*         background-color: rgb(156, 130, 3); */
  /*        padding: clamp(1.5rem, 4vh, 4rem); */
     }
-
-
-/***** Nav *****/
 
     nav ul { padding: 0; }
 
